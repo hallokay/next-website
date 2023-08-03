@@ -7,7 +7,9 @@ export default function About() {
     return (
         <div className={styles.container}>
             <div className={styles.imgContainer}>
-                {/* <Image src={ } fill={true} alt='' className={styles.img} /> */}
+                <Image
+                    src="https://images.pexels.com/photos/3194521/pexels-photo-3194521.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                    fill={true} alt='about background' className={styles.img} />
 
                 <div className={styles.imgText}>
                     <h1 className={styles.imgTitle}>
@@ -26,18 +28,35 @@ export default function About() {
                         Who are we?
                     </h1>
                     <p className={styles.desc}>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
+                        quae dolor, optio voluptatibus magnam iure esse tempora beatae. A
+                        suscipit eos. Animi quibusdam cum omnis officiis voluptatum quo ea
+                        eveniet? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Ducimus quae dolor, optio voluptatibus magnam iure esse tempora
+                        beatae, a suscipit eos. Animi quibusdam cum omnis officiis
                         <br />
-                        Mollitia, est? Voluptatem dicta repellat ipsum, voluptas iste, accusamus inventore totam laudantium natus soluta facere placeat quisquam, voluptatum accusantium nulla? Nobis, ea.
+                        <br />
+                        voluptatum quo ea eveniet? Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Ducimus quae dolor, optio voluptatibus magnam iure
+                        esse tempora beatae, a suscipit eos. Animi quibusdam cum omnis
+                        officiis voluptatum quo ea eveniet?
                     </p>
                 </div>
 
                 <div className={styles.item}>
-                    <h1 className={styles.title}>
-
-                    </h1>
+                    <h1 className={styles.title}>What We Do?</h1>
                     <p className={styles.desc}>
-
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
+                        quae dolor, optio voluptatibus magnam iure esse tempora beatae, a
+                        suscipit eos. Animi quibusdam cum omnis officiis voluptatum quo ea
+                        eveniet? Lorem ipsum dolor sit amet consectetur adipisicing elit. -
+                        Creative Illustrations
+                        <br />
+                        <br /> - Dynamic Websites
+                        <br />
+                        <br /> - Fast and Handy
+                        <br />
+                        <br /> - Mobile Apps
                     </p>
 
                     <Button title='contact' url='/contact' />
