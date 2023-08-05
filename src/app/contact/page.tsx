@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from './page.module.css'
 import Image from 'next/image'
+import { Button } from '@/components'
 
 export default function Contact() {
     return (
@@ -18,9 +19,11 @@ export default function Contact() {
                 </div>
                 <form className={styles.form}>
 
-                    <input type="text" className={styles.input} placeholder='' />
-                    <input type="text" className={styles.input} placeholder='' />
-                    <textarea />
+                    <input type="text" className={styles.input} placeholder='name' />
+                    <input type="text" className={styles.input} placeholder='email' />
+                    <textarea className={styles.textArea} cols={30} rows={10} placeholder='message'/>
+                    <Button title='Send' url='#'/>
+                
                 </form>
             </div>
         </div>

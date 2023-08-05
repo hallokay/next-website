@@ -4,6 +4,7 @@ import Link from 'next/link'
 import React from 'react'
 import { links } from '@/utils/constants'
 import styles from './nav.module.css'
+import {DarkModeToggle} from '@/components/index'
 
 export default function Navbar() {
     return (
@@ -11,6 +12,7 @@ export default function Navbar() {
             <Link href={`/`}
                 className={styles.logo}>lamamia!</Link>
             <div className={styles.links}>
+                <DarkModeToggle />
                 {links.map((link) => (
                     <Link href={link.url} key={link.id} className={styles.link} >
                         {link.title}
