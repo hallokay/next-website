@@ -2,6 +2,13 @@ import React from 'react'
 import styles from './page.module.css'
 import Image from 'next/image'
 import { Button } from '@/components'
+import type { Metadata } from 'next'
+ 
+
+export const metadata : Metadata = {
+    title: 'contact infomation',
+    description: 'contact 페이지입니다.'
+}
 
 export default function Contact() {
     return (

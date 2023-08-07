@@ -2,11 +2,32 @@ import React from 'react'
 import styles from './page.module.css';
 import Image from 'next/image';
 import getPost from '@/lib/getPost';
+import type { Metadata } from "next";
+
 
 type Params = {
   params: {
     id: string;
   }
+}
+
+export async function generateMetadata({
+  params: { id },
+}: Params) {
+  const postData: Promise<ApiPost> = getPost(id);
+  const post = await postData;
+
+  if(!post) {
+    return {
+      title: '게시물을 찾을 수 없습니다.'
+    }
+  }
+
+  return {
+    title: `${post.title}`,
+    description: `${post.desc}`
+  }
+
 }
 
 export default async function Post({params: {id}}: Params) {

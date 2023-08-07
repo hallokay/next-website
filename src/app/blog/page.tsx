@@ -4,6 +4,14 @@ import Link from "next/link";
 import Image from "next/image";
 import getAllPost from "@/lib/getAllPost";
 
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "blog",
+  description: "blog 페이지입니다.",
+};
+
+
 export default async function Blog() {
   const postData: Promise<ApiPost[]> = getAllPost();
   const post = await postData;
