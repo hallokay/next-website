@@ -6,11 +6,11 @@ type Post = {
   'body': string;
 };
 
-// type ApiPost = {
-//   id: ObjectId;
-//   title: string;
-//   desc: string;
-//   img: string;
-//   content: string;
-//   username: string;
-// };
+type ApiPost = {
+  _id: ObjectId;
+  title: string;
+  desc: string;
+  img: string;
+  content: string;
+  username: string;
+};

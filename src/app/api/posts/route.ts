@@ -7,7 +7,7 @@ export const GET = async (req: any) => {
     try{
         await connect();
         const posts: any = await Post.find();
-        return new NextResponse( posts, { status: 200 });
+        return new NextResponse(JSON.stringify(posts), { status: 200 });
 
 
     } catch(err) {

@@ -5,17 +5,21 @@ import Image from "next/image";
 import getAllPost from "@/lib/getAllPost";
 
 export default async function Blog() {
-  const postData: Promise<Post[]> = getAllPost();
+  const postData: Promise<ApiPost[]> = getAllPost();
   const post = await postData;
 
   return (
     <div className={styles.mainContainer}>
       {post.map((item) => (
-        <Link href={`/blog/${item.id}`} key={item.id} className={styles.container}>
+        <Link
+          href={`/blog/${item._id}`}
+          key={item._id}
+          className={styles.container}
+        >
           <div className={styles.imgContainer}>
             <Image
-              src={""}
-              alt=""
+              src={item.img}
+              alt="item img"
               width={400}
               height={250}
               className={styles.img}
@@ -23,8 +27,11 @@ export default async function Blog() {
           </div>
 
           <div className={styles.content}>
-            <h3 className={styles.title}>{item.title}</h3>
-            <p className={styles.desc}>{item.body}</p>
+            <h3 className={styles.title}>
+              {item.title}
+         
+            </h3>
+            <p className={styles.desc}>{item.desc}</p>
           </div>
         </Link>
       ))}
