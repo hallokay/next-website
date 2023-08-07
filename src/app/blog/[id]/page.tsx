@@ -1,13 +1,25 @@
 import React from 'react'
 import styles from './page.module.css';
 import Image from 'next/image';
-export default function Post() {
+import getPost from '@/lib/getPost';
+
+type Params = {
+  params: {
+    id: string;
+  }
+}
+
+export default async function Post({params: {id}}: Params) {
+  const postData: Promise<Post> = getPost(id);
+  const post = await postData;
+
+  
     return (
       <div className={styles.container}>
         <div className={styles.top}>
           <div className={styles.info}>
-            <h3 className={styles.title}></h3>
-            <p className={styles.desc}></p>
+            <h3 className={styles.title}>{post.title}</h3>
+            <p className={styles.desc}>{post.body}</p>
             <div className={styles.author}>
               <Image
                 src={""}
@@ -28,7 +40,7 @@ export default function Post() {
         </div>
         {/* //top */}
         <div className={styles.content}>
-          <p className={styles.text}></p>
+          <p className={styles.text}>{post.body}</p>
         </div>
       </div>
     );
